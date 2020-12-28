@@ -1,6 +1,11 @@
 Github
 =========
 
+
+saurabhmathurdevops@gmail.com
+Testing#1234
+
+
 1.) Repositary : It is collection of Files/Folder.
 
 2.) .gitignore : This file contain the object,which we do not want to push into the repostary. 
@@ -9,7 +14,9 @@ Github
 
 4.) Privare Repo: This can be accessed by limited persons. 
 
+
 ** Rebaase : This will cover later. 
+** Squash
 
 Git Commands and their usage :
 ------------------------------
@@ -42,4 +49,215 @@ Create Branch -> File (Added Notes) > Add  > Commit > Push to Mathur Respotary.
 
 https://github.com/Dhananjaya0000/Class22ndDEc.git  ( Dhananajya Repositary )
 
-https://github.com/saurabhmathurdevops/devops-personal ( Mathur Repostary ) 
+https://github.com/personal-devops123/devops-personal.git ( Mathur Repostary ) 
+
+Solution :
+============
+
+1. $ git branch ramakant
+2. $ git checkout ramakant
+3. $ git push origin ramakant  
+
+********************************************************************
+$ git push origin ramakant
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 1.35 KiB | 138.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ramakant' on GitHub by visiting:
+remote:      https://github.com/ramakant27/MathurClass/pull/new/ramakant
+remote:
+To https://github.com/ramakant27/MathurClass.git
+ * [new branch]      ramakant -> ramakant
+***********************************************************************
+
+4. add file from the front end
+
+Issue :
+==========
+
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (gitpractice)
+$ git branch ramakant
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (gitpractice)
+$ git branch
+* gitpractice
+  main
+  ramakant
+  
+ 
+NOTE : After switching to any branch, we should verify that header should pointing to that particular branch. 
+
+$ git log
+commit 82c7cd36023a820b1f4fe76bd1191fbbb70eda4c (HEAD -> ramakant, origin/ramakant)
+Author: Ramakant <ramakant_singh27@yahoo.com>
+Date:   Wed Dec 23 18:18:38 2020 -0600
+
+Git Branching - Branching Workflows:-
+=======================================
+https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
+
+
+# git log -p -2  ( Command to see last 2 changes in files ) 
+
+Red Color - > Delated contents from the file.
+Green Color -> Contents added in file.
+
+#git log --stat
+#git log --pretty=oneline
+#git log --pretty=format:"%h - %an, %ar : %s"
+
+
+Commit Rollback :
+====================
+
+#git reset commit-id <fileName.
+it will bring file in untrack area
+
+#git checkout commit-id <filename>
+it will bring file in staging area
+
+#git revert commit-id
+it will revert back the changes
+
+# Git Basics - Viewing the Commit History
+=======================================
+https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
+
+
+Assignement 2.)
+----------------
+
+1) both commit how you will merge in a single commit.
+2) how ramakant will switch to wherever HEAD is as of now
+
+Solution
+===========
+$ git log --oneline
+397a9f4 (HEAD -> ramakant) Added second commit for testing
+a460f3d added 1 point in file
+e0db6e3 Testing on
+82c7cd3 (origin/ramakant) Modifed the file with spaces
+e8cbf1e Modifed the file name
+69ebddd Add file for git from 24thDec
+01312b4 Initial commit
+
+git rebase --interactive HEAD~2
+
+
+$ git log --pretty=oneline
+bf297fc63495fce6a475713df374b4a43387555d (HEAD -> ramakant) added 1 point in file
+e0db6e3aed6ba9b2742d012f660f39ada1b9340f Testing on
+82c7cd36023a820b1f4fe76bd1191fbbb70eda4c (origin/ramakant) Modifed the file with spaces
+e8cbf1e60b468f9e08936263dbe5ed6f474df707 Modifed the file name
+69ebddd60eb7600d0183e62edf00030cc3c804f7 Add file for git from 24thDec
+01312b430b7a551580cbcbdad10eb4e6c7b0a1f9 Initial commit
+
+
+$ git rebase --interactive HEAD~2
+
+$ git log --pretty=oneline
+577108ae7a6f1ff6e7f40ac411d4a96f0c5ed04d (HEAD -> ramakant) Testing on
+82c7cd36023a820b1f4fe76bd1191fbbb70eda4c (origin/ramakant) Modifed the file with spaces
+e8cbf1e60b468f9e08936263dbe5ed6f474df707 Modifed the file name
+69ebddd60eb7600d0183e62edf00030cc3c804f7 Add file for git from 24thDec
+01312b430b7a551580cbcbdad10eb4e6c7b0a1f9 Initial commit
+
+
+Testing Git Commit ( Head & Branch Move  )
+========================================
+1.) Created file and edit 3 times. 
+
+2.) 
+
+$ git log --oneline
+7a4be25 (HEAD -> ramakant) Testing commit-3
+7483d77 Commit-2 testing
+7d026b1 New file to test commit1
+2d6af06 First Commit
+577108a Testing on
+82c7cd3 (origin/ramakant) Modifed the file with spaces
+e8cbf1e Modifed the file name
+69ebddd Add file for git from 24thDec
+01312b4 Initial commit
+
+
+Solution:
+
+
+$ git log --oneline
+8e89896 (HEAD) Testing running
+68b69f3 (ramakant) added text for mathur
+80ad360 Revert "Added rough text for testing"
+edea7c0 Added rough text for testing
+12eba5f Added rest of the class notes-26Dec20
+82c7cd3 (origin/ramakant) Modifed the file with spaces
+e8cbf1e Modifed the file name
+69ebddd Add file for git from 24thDec
+01312b4 Initial commit
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal1 ((8e89896...))
+$ git status
+HEAD detached from 68b69f3
+nothing to commit, working tree clean
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal1 ((8e89896...))
+$ git reflog
+8e89896 (HEAD) HEAD@{0}: commit: Testing running
+68b69f3 (ramakant) HEAD@{1}: checkout: moving from ramakant to 68b69f3
+68b69f3 (ramakant) HEAD@{2}: commit: added text for mathur
+80ad360 HEAD@{3}: revert: Revert "Added rough text for testing"
+edea7c0 HEAD@{4}: commit: Added rough text for testing
+12eba5f HEAD@{5}: commit: Added rest of the class notes-26Dec20
+82c7cd3 (origin/ramakant) HEAD@{6}: checkout: moving from main to ramakant
+692662c (origin/main, origin/HEAD, main) HEAD@{7}: clone: from https://github.com/personal-devops123/devops-personal.git
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal1 ((8e89896...))
+$ git checkout ramakant && git merge 8e89896
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  8e89896 Testing running
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 8e89896
+
+Switched to branch 'ramakant'
+Your branch is ahead of 'origin/ramakant' by 4 commits.
+  (use "git push" to publish your local commits)
+Updating 68b69f3..8e89896
+Fast-forward
+ ramakant_DevOps_Learning_Github | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal1 (ramakant)
+$ git log --oneline
+8e89896 (HEAD -> ramakant) Testing running
+68b69f3 added text for mathur
+80ad360 Revert "Added rough text for testing"
+edea7c0 Added rough text for testing
+12eba5f Added rest of the class notes-26Dec20
+82c7cd3 (origin/ramakant) Modifed the file with spaces
+e8cbf1e Modifed the file name
+69ebddd Add file for git from 24thDec
+01312b4 Initial commit
+
+
+====================================================================================================================================================
+===============
+27-Dec-2020
+===============
+
+NOTE : We need to create Pull request daily without fail.
+
+
+
+
+
