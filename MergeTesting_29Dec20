@@ -1,0 +1,2 @@
+1) make changes in remote github your specific branch (ramakant/dhananjaya) then do git fetch
+then find the way to findout difference in remote/ramakant and local ramakant branch code
