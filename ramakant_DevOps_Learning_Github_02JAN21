@@ -1,0 +1,68 @@
+sdjsanxkasjxzklzxnzxzxzxkczxnczxcnxzc zx xzjczxcGGGGGGGithub
+=========
+
+1.) Repositary : It is collection of Files/Folder.
+
+2.) .gitignore : This file contain the object,which we do not want to push into the repostary. 
+
+3.) Public Repo: This can be accessed by anyone. 
+
+4.) Privare Repo: This can be accessed by limited persons. 
+
+** Rebaase : This will cover later. 
+
+Git Commands and their usage :
+------------------------------
+
+. git clone
+. git branch
+. git checkout -b gitpractice ( It will create new branch and will switch to same branch )
+. git status ( It will tell you the current/non commit of the branch. 
+. git add  ( It will move the files to staging area )
+. git commit 
+. git push origin main
+. git restore 
+. .gitignore
+. git checkout -b ( Second Branch Name )
+. git checkout main/master ( Switch to main branch )
+. git commit -m "<Message>" ( Move file from staging area to commited area )
+. git push origin < Second branch name > 
+
+$ git branch -a ( It will show all the branches )
+
+Assignement 1.)
+=================
+
+1) create your branch ( i.e. Dhananajya/ Ramakant)
+2) create file with name 22dec2020_git_class1
+3) add and commit 
+4) push your branch
+
+Create Branch -> File (Added Notes) > Add  > Commit > Push to Mathur Respotary.
+
+https://github.com/Dhananjaya0000/Class22ndDEc.git  ( Dhananajya Repositary )
+
+https://github.com/saurabhmathurdevops/devops-personal ( Mathur Repostary ) 
+
+
+
+# Testing Comiitt
+eqddeddoqwpe
+
+ddqwdeamded
+dmewkdmedfspkfd
+
+fmkwefmef
+
+
+# Testing Commit -2
+
+both commit how you will merge in a single commit.
+
+We need to tase
+
+# Add first commit
+adding first commit for testing
+
+# Second commit
+Second commit for testing 
