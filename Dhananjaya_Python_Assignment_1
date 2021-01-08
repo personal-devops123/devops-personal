@@ -1,0 +1,96 @@
+Accetpt PRODUCt NO,pname,price,qty and calculate total ,disc(10% on total) and net amount and prepare bill.
+
+Accept studentname and 3 subjects marks and calculate total and avg. marks and prepare report.
+
+Accept empno,emane,sal and calculate ta,da,hrs,total_allownaces and gross salary and prepare employee pay slip.
+ta==>10% on sal
+da==>15% on sal
+hra==>20% on sal
+total_allow==>ta+da+hra
+gross_sal==>sal+total_allow
+
+
+Accept 2 integer numbers and swap it.
+
+-----------------------------------------------------------
+---------------------------------------------------------
+
+
+#1st assigment
+"""
+product_Number=int(input("Please insert Product NO:"))
+pname=input("insert product Name:")
+price=float(input("Insert Price:"))
+Qty=int(input("insert quantity:"))
+
+total=float(Qty*price)
+disc=total*10/100
+Net_Amount=float(total-disc)
+
+print("Product number: ",product_Number, "\n Product Name: ",pname, "\n Total Price :",total, "\n Quanitiy : ",Qty,"\n Discount :",disc, "\n Net_Amount:",Net_Amount)
+
+"""
+
+#3rd Assignment
+'''
+
+empno=int(input("Insert empno:"))
+ename=input("insert ename:")
+sal=float(input("Please input sal:"))
+ta=sal*10/100
+da=sal*15/100
+hra=sal*20/100
+total_allow=float(ta+da+hra)
+gross_sal=float(sal+total_allow)
+
+
+
+print("EMPNO: \t ENAME: \t  SAL:  \t TA:  \t DA: \t HRS:  \t Total Allowances: \t Gross SAL")
+
+print(empno ,"\t" ,ename,  "\t ", sal, "\t" ,ta , "\t" ,da,  "\t", hra, "\t"  ,total_allow ,"\t" , gross_sal,)
+
+#print("EMPNO: " , empno ,"\n ENAME: ", ename, "\n  SAL: ", sal, "\n TA: " ,ta, "\n DA: " ,da, "\n HRS: " ,hra, "\n Total Allowances: " ,total_allow ,"\n Gross SAL", gross_sal,)
+
+
+'''
+
+
+#2nd assignment
+'''
+Stu_name=input("Please provide Student Name:")
+
+MARK1=int(input("Please provide MARK for 1st SUBject :"))
+MARK2=int(input("Please provide MARK for 2nd SUBject "))
+MARK3=int(input("Please provide MARK for 3rd SUBject "))
+Total_Marks=MARK1+MARK2+MARK3
+AVG_MARK=round(float(Total_Marks/3),2)
+print("Student NAME: ",Stu_name,"\t Total_Marks: ",Total_Marks,"\t AVG_MARK : ",AVG_MARK)
+
+'''
+
+
+
+
+#swap the no.
+
+'''
+X = int(input("Please insert 1st number:\n"))
+Y = int(input("please insert 2nd number:\n"))
+print("Value for X is" ,X)
+print("Value for Y is ",Y)
+X,Y = Y, X
+print("After swaping ,valus for X is: ",X, "\n After swaping  value for Y is :" ,Y)
+
+'''
+'''
+X = X+Y
+Y = X-Y
+X = X-Y
+print("After swaping ,valus for X is: ",X, "\n After swaping  value for Y is :" ,Y)
+
+  '''
+
+
+
+
+

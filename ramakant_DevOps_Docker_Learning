@@ -1,0 +1,27 @@
+Docker
+=========
+
+https://docs.docker.com/get-started/overview/#what-can-i-use-docker-for
+
+
+Hypervisor :-
+
+It helps to communicate from Virtual machine with the host computer via
+a translator application. This translator application is known as hypervisor. 
+
+Docker worked on layer concept.
+
+Dockerfile : A file which contain definations.What/how the image will be created.
+Docker impage: Using dockerfile one image getting created as per our defined. 
+Docker Container : Using docker image we can start one or multiple containers.
+
+Note : For each line of Dockerfile;onle layer in Dockerimage is getting created.
+
+Docker Install 
+
+DevOps Tool Free/Lisence
+
+OpenSource : - 14Lines
+Freenium
+Enterprise
+Paid

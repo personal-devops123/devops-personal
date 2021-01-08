@@ -1,5 +1,10 @@
-sdjsanxkasjxzklzxnzxzxzxkczxnczxcnxzc zx xzjczxcGGGGGGGithub
+Github
 =========
+
+
+saurabhmathurdevops@gmail.com
+Testing#1234
+
 
 1.) Repositary : It is collection of Files/Folder.
 
@@ -9,10 +14,15 @@ sdjsanxkasjxzklzxnzxzxzxkczxnczxcnxzc zx xzjczxcGGGGGGGithub
 
 4.) Privare Repo: This can be accessed by limited persons. 
 
+
 ** Rebaase : This will cover later. 
+** Squash
 
 Git Commands and their usage :
 ------------------------------
+
+$ git config --global user.name "USERNAME"  ( This detail will update to all the respositatry )
+$ git config --global user.email "EMail"
 
 . git clone
 . git branch
@@ -42,27 +52,508 @@ Create Branch -> File (Added Notes) > Add  > Commit > Push to Mathur Respotary.
 
 https://github.com/Dhananjaya0000/Class22ndDEc.git  ( Dhananajya Repositary )
 
-https://github.com/saurabhmathurdevops/devops-personal ( Mathur Repostary ) 
+https://github.com/personal-devops123/devops-personal.git ( Mathur Repostary ) 
+
+Solution :
+============
+
+1. $ git branch ramakant
+2. $ git checkout ramakant
+3. $ git push origin ramakant  
+
+********************************************************************
+$ git push origin ramakant
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 1.35 KiB | 138.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ramakant' on GitHub by visiting:
+remote:      https://github.com/ramakant27/MathurClass/pull/new/ramakant
+remote:
+To https://github.com/ramakant27/MathurClass.git
+ * [new branch]      ramakant -> ramakant
+***********************************************************************
+
+4. add file from the front end
+
+Issue :
+==========
+
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (gitpractice)
+$ git branch ramakant
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (gitpractice)
+$ git branch
+* gitpractice
+  main
+  ramakant
+  
+ 
+NOTE : After switching to any branch, we should verify that header should pointing to that particular branch. 
+
+$ git log
+commit 82c7cd36023a820b1f4fe76bd1191fbbb70eda4c (HEAD -> ramakant, origin/ramakant)
+Author: Ramakant <ramakant_singh27@yahoo.com>
+Date:   Wed Dec 23 18:18:38 2020 -0600
+
+Git Branching - Branching Workflows:-
+=======================================
+https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
+
+
+# git log -p -2  ( Command to see last 2 changes in files ) 
+
+Red Color - > Delated contents from the file.
+Green Color -> Contents added in file.
+
+#git log --stat
+#git log --pretty=oneline
+#git log --pretty=format:"%h - %an, %ar : %s"
+
+
+Commit Rollback :
+====================
+
+#git reset commit-id <fileName.
+it will bring file in untrack area
+
+#git checkout commit-id <filename>
+it will bring file in staging area
+
+#git revert commit-id
+it will revert back the changes
+
+# Git Basics - Viewing the Commit History
+=======================================
+https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
+
+
+Assignement 2.)
+----------------
+
+1) both commit how you will merge in a single commit.
+2) how ramakant will switch to wherever HEAD is as of now
+
+Solution
+===========
+$ git log --oneline
+397a9f4 (HEAD -> ramakant) Added second commit for testing
+a460f3d added 1 point in file
+e0db6e3 Testing on
+82c7cd3 (origin/ramakant) Modifed the file with spaces
+e8cbf1e Modifed the file name
+69ebddd Add file for git from 24thDec
+01312b4 Initial commit
+
+git rebase --interactive HEAD~2
+
+
+$ git log --pretty=oneline
+bf297fc63495fce6a475713df374b4a43387555d (HEAD -> ramakant) added 1 point in file
+e0db6e3aed6ba9b2742d012f660f39ada1b9340f Testing on
+82c7cd36023a820b1f4fe76bd1191fbbb70eda4c (origin/ramakant) Modifed the file with spaces
+e8cbf1e60b468f9e08936263dbe5ed6f474df707 Modifed the file name
+69ebddd60eb7600d0183e62edf00030cc3c804f7 Add file for git from 24thDec
+01312b430b7a551580cbcbdad10eb4e6c7b0a1f9 Initial commit
+
+
+$ git rebase --interactive HEAD~2
+
+$ git log --pretty=oneline
+577108ae7a6f1ff6e7f40ac411d4a96f0c5ed04d (HEAD -> ramakant) Testing on
+82c7cd36023a820b1f4fe76bd1191fbbb70eda4c (origin/ramakant) Modifed the file with spaces
+e8cbf1e60b468f9e08936263dbe5ed6f474df707 Modifed the file name
+69ebddd60eb7600d0183e62edf00030cc3c804f7 Add file for git from 24thDec
+01312b430b7a551580cbcbdad10eb4e6c7b0a1f9 Initial commit
+
+
+Testing Git Commit ( Head & Branch Move  )
+========================================
+1.) Created file and edit 3 times. 
+
+2.) 
+
+$ git log --oneline
+7a4be25 (HEAD -> ramakant) Testing commit-3
+7483d77 Commit-2 testing
+7d026b1 New file to test commit1
+2d6af06 First Commit
+577108a Testing on
+82c7cd3 (origin/ramakant) Modifed the file with spaces
+e8cbf1e Modifed the file name
+69ebddd Add file for git from 24thDec
+01312b4 Initial commit
+
+
+Solution:
+
+
+$ git log --oneline
+8e89896 (HEAD) Testing running
+68b69f3 (ramakant) added text for mathur
+80ad360 Revert "Added rough text for testing"
+edea7c0 Added rough text for testing
+12eba5f Added rest of the class notes-26Dec20
+82c7cd3 (origin/ramakant) Modifed the file with spaces
+e8cbf1e Modifed the file name
+69ebddd Add file for git from 24thDec
+01312b4 Initial commit
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal1 ((8e89896...))
+$ git status
+HEAD detached from 68b69f3
+nothing to commit, working tree clean
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal1 ((8e89896...))
+$ git reflog
+8e89896 (HEAD) HEAD@{0}: commit: Testing running
+68b69f3 (ramakant) HEAD@{1}: checkout: moving from ramakant to 68b69f3
+68b69f3 (ramakant) HEAD@{2}: commit: added text for mathur
+80ad360 HEAD@{3}: revert: Revert "Added rough text for testing"
+edea7c0 HEAD@{4}: commit: Added rough text for testing
+12eba5f HEAD@{5}: commit: Added rest of the class notes-26Dec20
+82c7cd3 (origin/ramakant) HEAD@{6}: checkout: moving from main to ramakant
+692662c (origin/main, origin/HEAD, main) HEAD@{7}: clone: from https://github.com/personal-devops123/devops-personal.git
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal1 ((8e89896...))
+$ git checkout ramakant && git merge 8e89896
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  8e89896 Testing running
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 8e89896
+
+Switched to branch 'ramakant'
+Your branch is ahead of 'origin/ramakant' by 4 commits.
+  (use "git push" to publish your local commits)
+Updating 68b69f3..8e89896
+Fast-forward
+ ramakant_DevOps_Learning_Github | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal1 (ramakant)
+$ git log --oneline
+8e89896 (HEAD -> ramakant) Testing running
+68b69f3 added text for mathur
+80ad360 Revert "Added rough text for testing"
+edea7c0 Added rough text for testing
+12eba5f Added rest of the class notes-26Dec20
+82c7cd3 (origin/ramakant) Modifed the file with spaces
+e8cbf1e Modifed the file name
+69ebddd Add file for git from 24thDec
+01312b4 Initial commit
+
+
+====================================================================================================================================================
+===============
+27-Dec-2020
+===============
+
+NOTE : We need to cre
+
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal (ramakant)
+$ cp ../MathurClass/DevOps_Learning_Github .
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal (ramakant)
+$ ls -lart
+total 27
+-rw-r--r-- 1 ramak 197609  350 Dec 26 10:44 .gitignore
+-rw-r--r-- 1 ramak 197609   17 Dec 26 10:44 README.md
+-rw-r--r-- 1 ramak 197609 1675 Dec 26 17:54 ramakant_DevOps_Learning_Github
+drwxr-xr-x 1 ramak 197609    0 Dec 26 19:59 ../
+-rw-r--r-- 1 ramak 197609   49 Dec 26 20:05 Commit_testing_27Dec20
+drwxr-xr-x 1 ramak 197609    0 Dec 26 20:05 ./
+drwxr-xr-x 1 ramak 197609    0 Dec 27 17:29 .git/
+-rw-r--r-- 1 ramak 197609 7915 Dec 27 17:31 DevOps_Learning_Github
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal (ramakant)
+$ vi DevOps_Learning_Github
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal (ramakant)
+$ git add DevOps_Learning_Github
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal (ramakant)
+$ git commit -m "Add file into Mathur Respostary"
+[ramakant ac9a98d] Add file into Mathur Respostary
+ 1 file changed, 219 insertions(+), 1 deletion(-)
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal (ramakant)
+$ git push origin ramakant
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (19/19), 4.54 KiB | 664.00 KiB/s, done.
+Total 19 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 2 local objects.
+To https://github.com/personal-devops123/devops-personal.git
+   82c7cd3..ac9a98d  ramakant -> ramakant
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal (ramakant)
+$
+
+
+# Git Remote Branch
+=====================
+
+# $ git branch -r
+
+$ git branch -a  ( It will show all -Local & Remote branch )
+  main
+* ramakant
+  remotes/origin/Dhananjaya
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+  remotes/origin/ramakant
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/devops-personal (ramakant)
+$ git branch -r   ( It will show only remote branch ) 
+  origin/Dhananjaya
+  origin/HEAD -> origin/main
+  origin/main
+  origin/ramakant
+
+
+Git Remote
+===========
+
+Assignement :
+
+1.) How to find diffrence between remote branch & master after fetch.
 
 
 
-# Testing Comiitt
-eqddeddoqwpe
+Git Merge 
+=========
 
-ddqwdeamded
-dmewkdmedfspkfd
+- Merging any branch with master.
 
-fmkwefmef
+Delete Branch
+===============
+
+- Delete from the Local system
+
+$ git branch -d "BRANCH NAME"
+
+- Delete Branch from the Remote 
+
+$ git push origin --delete "BRANCH NAME"
 
 
-# Testing Commit -2
 
-both commit how you will merge in a single commit.
+Assignement :4
+===================
 
-We need to tase
+1) make changes in remote github your specific branch (ramakant/dhananjaya) then do git fetch
+then find the way to findout difference in remote/ramakant and local ramakant branch code
 
-# Add first commit
-adding first commit for testing
+2)make changes in file x in ramakant branch and commit
+make same and different changes in dhananjaya branch in same file
+now merge ramakant branch in dhananjaya branch
+ 
+3)make changes in file x in ramakant branch and commit
+make same and different changes in dhananjaya branch in same file
+now merge dhananjaya branch in ramakant branch
+ 
+4) create a scenario of conflict in merge
+ 
+5) what is the meaning of git fork
 
-# Second commit
-Second commit for testing 
+============================================================================================================================
+1.) 
+
+Git Fetch & Merge:
+==================
+
+Testing - 
+
+1.) Create a file on remote ( Fetch_Testing01JAN21 ).
+
+2.) Pull file into local branch. 
+
+$ git pull origin ramakant
+
+3.) Modified the contents in the file at the remote.
+
+4.) Fetch the file. 
+
+$ git fetch origin ramakant ( It will pull file to remote branch remote/origin/ramakant but not in the local branch. )
+
+After the FETCH, If we will see the file on local, it won't be show the modified contents.
+
+5.) We can validate the point 4 to run the diff comman to see the diffrence between local & remote file.
+
+$ git diff ramakant origin/ramakant
+diff --git a/Fetch_Testing01JAN21 b/Fetch_Testing01JAN21
+index 8b13789..47be0e7 100644
+--- a/Fetch_Testing01JAN21
++++ b/Fetch_Testing01JAN21
+@@ -1 +1,2 @@
++Additng content to test fetch. ( This was the content which we have added to test )
+
+
+6.) We will run merge command to pull the modifed content into the local branch. 
+
+$ git merge origin/ramakant  ( It will update the modified contents from the remote branch to local branch )
+
+===========================
+Pull = FETCH + MERGE 
+===========================
+
+
+Assesement -2
+===============
+
+1.) 
+
+https://github.com/ramakant27/MathurClass.git,N 
+
+Issue 1.)
+
+When Dhananjay Clone MathurClass Repo , it was showing only main repostary detail not complete all the branches which is under MathurClass repo. 
+We pulled indiduval branches. 
+
+Question : Why all the branches not came with Clone.
+
+
+Issue 2.)
+===========
+$ git push origin dhananjay
+remote: Permission to ramakant27/MathurClass.git denied to Dhananjaya0000.
+fatal: unable to access 'https://github.com/ramakant27/MathurClass.git/': The requested URL returned error: 403
+
+dhananjaya@DESKTOP-OP9O4IA MINGW64 ~/Desktop/DJ/GITHUB_22nddec/MathurClass (dhananjay)
+$
+
+
+Solution: 
+
+# Ramakant will go to his remote and allow Dhananjay to get access on his Repo ( MasterClass ).
+
+Setting -> Manage Access -> Invite a collobrator -> Add dhananjay user email ID. 
+Now, Dhananajya will get the mail from the github, upon accepting the request he would able to access push the files. 
+
+*********
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (ramakant)
+$ vi Filex_Asses2_Test
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (ramakant)
+$ vi Filex_Asses2_Test
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (ramakant)
+$ git commit -a -m "Modifed and update code file second time"
+[ramakant a058974] Modifed and update code file second time
+ 1 file changed, 6 insertions(+)
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (ramakant)
+$ git push origin ramakant
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 731 bytes | 365.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/ramakant27/MathurClass.git
+   9c83b8e..a058974  ramakant -> ramakant
+*********************
+
+
+Question -3
+===============
+
+
+$ git checkout ramakant
+Switched to branch 'ramakant'
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (ramakant)
+$ vi Filex_Asses2_Test
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (ramakant)
+$ git commit -a -m "Merge in MathurClass from Ramakant- Conflict testing"
+[ramakant a72d7c8] Merge in MathurClass from Ramakant- Conflict testing
+ 1 file changed, 4 insertions(+)
+
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (ramakant)
+$ git checkout -b Master_Merge
+Switched to a new branch 'Master_Merge'
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (Master_Merge)
+$ git push origin ramakant
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 410 bytes | 205.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/ramakant27/MathurClass.git
+   a058974..a72d7c8  ramakant -> ramakant
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (Master_Merge)
+$ git checkout dhananjay
+Switched to branch 'dhananjay'
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (dhananjay)
+$ vi Filex_Asses2_Test
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (dhananjay)
+$ git commit -a -m "Modfied by Dhananjay after Ramamaknt"
+[dhananjay 371a108] Modfied by Dhananjay after Ramamaknt
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (dhananjay)
+$ git checkout Master_Merge
+Switched to branch 'Master_Merge'
+
+ramak@DESKTOP-DAOIPV6 MINGW64 ~/Desktop/Git Mathur/MathurClass (Master_Merge)
+$ git merge dhananjay
+Auto-merging Filex_Asses2_Test
+CONFLICT (content): Merge conflict in Filex_Asses2_Test
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+$ git status
+On branch Master_Merge
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   Filex_Asses2_Test
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+- Open the file and see the conflict.
+
+<<<<<<< HEAD
+3.) To check Merge conflict. Merging in MathurClass repo.
+
+^[[200~ create a scenario of conflict in merge
+=======
+*** Modified by Dhananjay after Ramakant work**
+>>>>>>> dhananjay
+~
+
+
+Question 4.) what is the meaning of git fork.
+==============================================
+
+This process is known as forking. Creating a “fork” is producing a personal copy of someone else's project. 
+Forks act as a sort of bridge between the original repository and your personal copy. 
+You can submit Pull Requests to help make other people's projects better by offering your changes up to the original project.
+
+
