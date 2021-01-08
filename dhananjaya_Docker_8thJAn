@@ -1,0 +1,13 @@
+Hypervisor helps to communicate from VM with host computers via a translator application. This translator application is known as supervisor.
+Docker works on layer concept.
+Docker file: -A file which contains definition, what/how the image will be created.
+Docker Image-Using Docker file one image getting created as per our defined definitions in Docker file.
+Docker Container-Using docker image, we can start one or multiple containers.
+For each line of Docker file; One layer in Docker image is getting created.
+
+How to install docker on windows:-->>>
+https://docs.docker.com/get-started/overview/#what-can-i-use-docker-for
+
+Jenkins
+List down the Free and paid ,Freenium,open source ,Enterprise devops tools.
+
