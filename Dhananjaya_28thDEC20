@@ -1,0 +1,27 @@
+28th session activity
+
+git reset commit-id <fileName.
+
+it will bring file in untrack area
+
+git checkout commit-id <filename>
+
+it will bring file in staging area
+
+git revert commit-id
+
+it will revert back the changes
+-----------------------------------------
+
+Assignment:--
+
+1) both commit how you will merge in a single commit
+
+2) how ramakant will switch to wherever HEAD is as of now
+
+Solution:-
+====================
+ 
+git checkout master [OR Branch NAME] && git merge [ref of HEAD]
+
+git checkout DHANANJAYA233rd && git merge 8986a8c
